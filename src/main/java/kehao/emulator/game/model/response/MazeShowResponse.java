@@ -1,0 +1,6 @@
+package kehao.emulator.game.model.response;
+
+import kehao.emulator.game.model.basic.MazeStatus;
+
+public class MazeShowResponse extends GameData<MazeStatus> {
+}
