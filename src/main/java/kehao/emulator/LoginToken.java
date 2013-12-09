@@ -1,10 +1,5 @@
 package kehao.emulator;
 
-/**
- * User: Mothership
- * Date: 13-6-1
- * Time: 上午12:34
- */
 public class LoginToken {
   private String serverName;
   private String host;

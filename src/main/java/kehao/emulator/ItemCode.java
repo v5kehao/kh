@@ -1,10 +1,5 @@
 package kehao.emulator;
 
-/**
- * User: Mothership
- * Date: 13-6-15
- * Time: 下午7:37
- */
 public class ItemCode {
 
   public static final int Tutorial_Fight = 1;

@@ -1,10 +1,5 @@
 package kehao.emulator.web.model.basic;
 
-/**
- * User: Mothership
- * Date: 13-5-24
- * Time: 下午11:10
- */
 public class GameServer {
   private String gsChatIp;
   private int gsChatPort;

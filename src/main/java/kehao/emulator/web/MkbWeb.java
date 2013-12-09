@@ -63,7 +63,7 @@ public class MkbWeb {
   public <T extends ReturnTemplate> T sendRequest(PassportRequest<T> passportRequest, Class<T> clazz) {
     HttpPost post = new HttpPost("http://pp.fantasytoyou.com/pp/userService.do?muhe_id=" + token);
     try {
-      List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+      List<NameValuePair> nvps = new ArrayList<>();
       nvps.add(new BasicNameValuePair("muhe_func", passportRequest.getFunc()));
       nvps.add(new BasicNameValuePair("muhe_args", client.encryptArgs(passportRequest.getArgs(), EncryptMode, 1, 0)));
       nvps.add(new BasicNameValuePair("muhe_encode", "false"));

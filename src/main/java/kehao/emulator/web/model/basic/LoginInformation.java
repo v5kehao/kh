@@ -1,10 +1,5 @@
 package kehao.emulator.web.model.basic;
 
-/**
- * User: Mothership
- * Date: 13-5-24
- * Time: 下午11:14
- */
 public class LoginInformation {
   private String GS_NAME;
   private String GS_IP;

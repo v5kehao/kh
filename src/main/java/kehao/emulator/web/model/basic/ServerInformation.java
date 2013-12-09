@@ -2,11 +2,6 @@ package kehao.emulator.web.model.basic;
 
 import java.util.List;
 
-/**
- * User: Mothership
- * Date: 13-5-24
- * Time: 下午11:14
- */
 public class ServerInformation {
   private int SERVER_DISTRIBUTE;
   private List<GameServer> GAME_SERVER;
