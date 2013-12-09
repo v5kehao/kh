@@ -38,21 +38,7 @@ public class EmulatorCard {
     return response.getData();
   }
 
-
-  public long setCardGroup(String username, Group group) throws ServerNotAvailableException,
-                                                                  WrongCredentialException {
-    Map<String, String> params = new LinkedHashMap<>();
-    params.put("Cards", group.getUserCardIds());
-    params.put("Runes", group.getUserRuneIds());
-    params.put("GroupId", Long.toString(group.getGroupId()));
-    CardSetCardGroupResponse response = core.gameDoAction(username, "card.php", "SetCardGroup", params, CardSetCardGroupResponse.class);
-    if(response.badRequest()) {
-      unknownErrorHandler.print(username, response.getMessage());
-    }
-    return response.getData().getGroupId();
-  }
-
-  public long setCardGroup(String username, List<Long> userCardIds, List<Long> userRuneIds, long groupId) throws ServerNotAvailableException,
+  public long setCardGroup(String username, long groupId, Iterable<Long> userCardIds, Iterable<Long> userRuneIds) throws ServerNotAvailableException,
                                                                                                                    WrongCredentialException {
     Map<String, String> params = new LinkedHashMap<>();
     params.put("Cards", StringUtils.join(userCardIds, "_"));
@@ -65,7 +51,7 @@ public class EmulatorCard {
     return response.getData().getGroupId();
   }
 
-  public long getDefaultCardGroup(String username, boolean refresh) throws ServerNotAvailableException,
+  public long getDefaultCardGroup(String username) throws ServerNotAvailableException,
                                                                              WrongCredentialException {
     return -1;
   }
