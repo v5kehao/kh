@@ -17,6 +17,8 @@ public class MainPanel extends JPanel {
   private CenterPanel centerPanel;
   @Autowired
   private AdminPanel adminPanel;
+  @Autowired
+  private ToolsPanel toolsPanel;
 
   @PostConstruct
   public void init() {
@@ -24,5 +26,6 @@ public class MainPanel extends JPanel {
     add(accountPanel, BorderLayout.WEST);
     add(centerPanel, BorderLayout.CENTER);
     add(adminPanel, BorderLayout.SOUTH);
+    add(toolsPanel, BorderLayout.NORTH);
   }
 }

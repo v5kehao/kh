@@ -257,6 +257,7 @@ public class MazePanel extends FunctionalInterfacePanel<MazeSetting> {
     setting.setMaze8(maze8.isSelected());
     setting.setDesc(desc.isSelected());
     setting.setBudget(budgetTf.getIntegerValue());
+    setting.setEnergyBudget(energyTf.getIntegerValue());
     setting.setCardGroup(cardGroupCb.getCardGroup());
     setting.setDynamicCardGroup(dynamicCardGroup);
     setting.setExitCardGroup(exitCardGroupCb.getCardGroup());
@@ -282,6 +283,7 @@ public class MazePanel extends FunctionalInterfacePanel<MazeSetting> {
     asc.setSelected(!setting.isDesc());
     desc.setSelected(setting.isDesc());
     budgetTf.setIntegerValue(setting.getBudget());
+    energyTf.setIntegerValue(setting.getEnergyBudget());
     cardGroupCb.setCardGroup(setting.getCardGroup());
     dynamicCardGroup = setting.getDynamicCardGroup();
     dynamicCardGroupCb.setSelected(!setting.getDynamicCardGroup().isEmpty());
